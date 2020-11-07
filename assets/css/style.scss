@@ -7,6 +7,23 @@
   color: red;
 }
 
+
+//kramdown elements for formatting the Markdown even more
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
+.center-image-caption
+{
+    color: gray;
+    text-align: center;
+}
+
+
+
 // Basic properties of nav element
 
 .biography
