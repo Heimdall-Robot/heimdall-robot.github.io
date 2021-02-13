@@ -1,4 +1,4 @@
-# Heimdall Website
+# Heimdallr Website
 
 This is the source repository for the project website. Whenever a change is made to this repository's master branch,
 it willl automatically update [heimdall-robot.github.io](heimdall-robot.github.io).
