@@ -3,6 +3,7 @@ layout: default
 title: Markdown Quick Reference
 author: roper
 ---
+
 [Return to all Guides](/guides.html)
 
 # {{ page.title }}
@@ -12,7 +13,9 @@ plain text, using simple commands, some of which are:
 
 ```markdown
 # Header 1
+
 ## Header 2
+
 ### Header 3
 
 - Bulleted

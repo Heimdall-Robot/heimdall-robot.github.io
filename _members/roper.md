@@ -4,4 +4,5 @@ name: Gabriel Roper
 position: Team Lead
 major: Electrical Engineering
 ---
-*Bio Here*
+
+_Bio Here_

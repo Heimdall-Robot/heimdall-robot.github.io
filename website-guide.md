@@ -57,7 +57,7 @@ Additional Markdown features can be added through the use of extensions (such as
 ## Local Testing
 
 If you want to test changes that you have made to the site without having to push a commit to GitHub, the
-eaisest way is to use Local testing for this website is eaisest with Linux. To test the page locally with Windows,
+easiest way is to use Local testing for this website is easiest with Linux. To test the page locally with Windows,
 [install the Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
 In Linux:

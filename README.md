@@ -1,7 +1,7 @@
 # Heimdallr Website
 
 This is the source repository for the project website. Whenever a change is made to this repository's master branch,
-it willl automatically update [heimdall-robot.github.io](heimdall-robot.github.io).
+it will automatically update [heimdall-robot.github.io](heimdall-robot.github.io).
 
 ## How it works
 
@@ -18,29 +18,28 @@ website. GitHub provides a [really good guide](https://guides.github.com/feature
 write markdown.
 
 For project status updates, place them in the posts folder, and make the filename match this style: `yyyy-mm-dd-name.md`
-where *name* is the post name. If you need to add images to the post, nest the post in a folder with the same name as
+where _name_ is the post name. If you need to add images to the post, nest the post in a folder with the same name as
 it, and place the images in the folder too.
 
 Since Markdown files are just plain text files, any text editor can be used. However, some editors are better than
 others, as they have specific markdown support. Some include:
 
-* [GitHub](https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository) has a simple
-editor and preview system built into it, so you can edit files right on GitHub.com.
-* [prose.io](prose.io) is a very simple web-based editor that can open and save Markdown files to GitHub projects.
-* [stackedit.io](stackedit.io) is a little bit more advanced web-based editor. Its preview features are better than
-prose.io, but configuring it to sync with GitHub is more complicated.
-* [Marktext](marktext.app) is an open-source text editor designed specifically for editing Markdown documents. The best
-thing about it is that is will display markdown text exactly as it will be displayed on a website.
-* [Visual Studio Code](https://code.visualstudio.com/) supports syntax highlighting and page preview for Markdown files.
-Additional Markdown features can be added through the use of extensions (such as `markdownlint`, 'unotes', and
-`Markdown All in One`. Furthermore, it has git support built in, so you can quickly upload files to the website.
-
+- [GitHub](https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository) has a simple
+  editor and preview system built into it, so you can edit files right on GitHub.com.
+- [prose.io](prose.io) is a very simple web-based editor that can open and save Markdown files to GitHub projects.
+- [stackedit.io](stackedit.io) is a little bit more advanced web-based editor. Its preview features are better than
+  prose.io, but configuring it to sync with GitHub is more complicated.
+- [Marktext](marktext.app) is an open-source text editor designed specifically for editing Markdown documents. The best
+  thing about it is that is will display markdown text exactly as it will be displayed on a website.
+- [Visual Studio Code](https://code.visualstudio.com/) supports syntax highlighting and page preview for Markdown files.
+  Additional Markdown features can be added through the use of extensions (such as `markdownlint`, 'unotes', and
+  `Markdown All in One`. Furthermore, it has git support built in, so you can quickly upload files to the website.
 
 ## Local Testing
 
 If you want to test changes that you have made to the site without having to push a commit to GitHub, the
-eaisest way is to use Local testing for this website is eaisest with Linux. To test the page locally with Windows, install the Windows
-Subsystem for Linux on Windows.
+easiest way is to use Local testing for this website is easiest with Linux. To test the page locally with Windows,
+install the Windows Subsystem for Linux and use that (Both WSLv1 and WSLv2 will work).
 
 In Linux:
 
