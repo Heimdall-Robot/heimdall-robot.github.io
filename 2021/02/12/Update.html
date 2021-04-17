@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="/assets/css/style.css?v=db7e0c2d4a1123a8e3cee41198736144f92c5b15">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
+    <script src="/assets/js/navbar.js">
+    </script>
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Revenge of the TLAs: USB, PCB, ROS | Heimdallr</title>
+<meta name="generator" content="Jekyll v3.9.1" />
+<meta property="og:title" content="Revenge of the TLAs: USB, PCB, ROS" />
+<meta name="author" content="roper" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This week a few different things happened. Nick continues the implementation of the walking algorithm, Alex has received the 3D printed servo mounts that will be used on the robot, and he continues refining the structural design for the robot. Trevor has taken over working on ROS and the Jetson Nano to free myself up to work on re-designing the custom PCB that we will use. In the past week, the PCB has undergone two revisions to improve its capabilities, which means that a total of three revisions of the PCB have been designed so far." />
+<meta property="og:description" content="This week a few different things happened. Nick continues the implementation of the walking algorithm, Alex has received the 3D printed servo mounts that will be used on the robot, and he continues refining the structural design for the robot. Trevor has taken over working on ROS and the Jetson Nano to free myself up to work on re-designing the custom PCB that we will use. In the past week, the PCB has undergone two revisions to improve its capabilities, which means that a total of three revisions of the PCB have been designed so far." />
+<link rel="canonical" href="https://heimdallr-robot.github.io/2021/02/12/Update.html" />
+<meta property="og:url" content="https://heimdallr-robot.github.io/2021/02/12/Update.html" />
+<meta property="og:site_name" content="Heimdallr" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Revenge of the TLAs: USB, PCB, ROS" />
+<script type="application/ld+json">
+{"description":"This week a few different things happened. Nick continues the implementation of the walking algorithm, Alex has received the 3D printed servo mounts that will be used on the robot, and he continues refining the structural design for the robot. Trevor has taken over working on ROS and the Jetson Nano to free myself up to work on re-designing the custom PCB that we will use. In the past week, the PCB has undergone two revisions to improve its capabilities, which means that a total of three revisions of the PCB have been designed so far.","url":"https://heimdallr-robot.github.io/2021/02/12/Update.html","@type":"BlogPosting","headline":"Revenge of the TLAs: USB, PCB, ROS","dateModified":"2021-02-12T00:00:00+00:00","datePublished":"2021-02-12T00:00:00+00:00","author":{"@type":"Person","name":"roper"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://heimdallr-robot.github.io/2021/02/12/Update.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+
+            <a href="/index.html">
+                <h1 id="project_title">Heimdallr</h1>
+                <h2 id="project_tagline">Multi-Terrain Patrol, Security, and Surveillance Robot</h2>
+            </a>
+
+            <div class="navbar" id="myTopnav">
+    <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a><a href="/">Home</a><a href="/members.html">Team Members</a><a href="/posts.html">Project Updates</a><a href="/therobot.html">The Robot</a><div class="dropdown">
+        <button class="dropbtn"> Documents
+            <i class="fa fa-caret-down"></i>
+
+        </button>
+        <div class="dropdown-content"><a href="/documents/Requirements.html">Project Requirements</a><a href="/documents/Literary-Search.html">Literary Research</a><a href="/documents/style-guide.html">Style Guide</a></div>
+    </div><a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
+</div>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+        <section id="main_content" class="inner">
+            <h1>Revenge of the TLAs&#58; USB, PCB, ROS</h1>
+
+<p>
+    12 Feb 2021- <a href="/members/roper.html">Gabriel Roper</a></p>
+
+<p>This week a few different things happened. Nick continues the implementation of the walking algorithm, Alex has
+received the 3D printed servo mounts that will be used on the robot, and he continues refining the structural design
+for the robot. Trevor has taken over working on ROS and the Jetson Nano to free myself up to work on re-designing the
+custom PCB that we will use. In the past week, the PCB has undergone two revisions to improve its capabilities, which
+means that a total of three revisions of the PCB have been designed so far.</p>
+
+<h2 id="revision-1">Revision 1</h2>
+
+<p>The first revision was a quick design last semester with the goal of demonstrating all of the main capabilities of the
+board. This design was noticeable for the heavy use of through hole components to simplify soldering.</p>
+
+<p class="center-image-caption"><img src="PCB_REV_1.png" alt="First Revision of the PCB" class="center-image" />
+First Revision of the PCB</p>
+
+<h2 id="revision-2">Revision 2</h2>
+
+<p>When the team begain placing orders this semester, it was discovered that the power converter IC that the team intended
+to use was out of stock at all major distributer until December, so a new power IC had to be selected. Using the
+<a href="https://www.ti.com/design-resources/design-tools-simulation/webench-power-designer.html">WEBENCH Power Designer</a>
+(<em>This should not be considered an endorsement of TI products by our team</em>) from
+Texas Instruments, 4 possible new designs were found, and one based on the
+<a href="https://www.ti.com/product/TPS55288">TPS55288</a> was selected, as all four designs had the same unit cost, but the
+TPS55288 based design offered the most capabilities.
+As this IC is designed for USB Power Delivery, the output current limit and voltage can be controlled over I2C.
+This I2C bus also allows for the IC to report some error states, it can be used for on-board debugging of the design
+as well. Additionally, the IC has the ability to output a voltage proportional to the current draw of the load. While
+this feature was designed to allow voltage compensation for loss in long wires, it can be also used as a general purpose
+current sensor, which will greatly improve the battery calculations on the robot.</p>
+
+<p>Another issue discovered was the orientation of the header on the PCB that would be connected to the Jetson Nano had the
+pins mapped improperly, due to the fact that the KiCAD footprints for a pin header (a male connector), and a pin socket
+(a female connector), were not the same.</p>
+
+<p>These two issue required significant redesign of the PCB, leading to the second revision. During this process, it was
+also decided that surface mount soldering was possible, and most componets were switched to it to save space.</p>
+
+<p>Additionally, as the battery connector is polarized, and components that are exposed directly to the board have
+reverse voltage protection, the additional reverse protection circuitry was removed.</p>
+
+<p class="center-image-caption"><img src="PCB_REV_2.png" alt="PCB Revision 2" class="center-image" />
+PCB Revision 2</p>
+
+<h2 id="revision-3">Revision 3</h2>
+
+<p>The second revision was considered feature complete, but it was decided that it fell short in expandability.
+As designed, not all pins on the Jetson Nano were being utilized in the design. However, as a ribbon cable will be used
+to link the Jetson Nano to the PCB, these pins will be inaccessible. If additional electronics are added to the design
+an new PCB would have had to be designed.</p>
+
+<p>PCB Revision 3 is still being finalized, but when complete, it will solve this problem by adding additional pin headers
+to the board that allow for quick access to the additional pins. The small size of board meant that this requires
+re-arranging most of the existing pin headers, making this revision more complex that expected.</p>
+
+<p class="center-image-caption"><img src="PCB_REV_3.png" alt="PCB Revision 3 (in progress)" class="center-image" />
+PCB Revision 3 (in progress)</p>
+
+<h2 id="revision-4">Revision 4?</h2>
+
+<p>A fourth revision of the PCB might be made. This would be a fairly minor version, adding test pads to the design.
+Should we opt to have our PCB manufactured by a third part that adds a Solder Mask, test points will greatly simplify
+any diagnostics that may be necessary.</p>
+
+        </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <footer>
+        <div id="footer_wrap" class="outer">
+    </footer>
+    </div>
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-176925840-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+</body>
+
+</html>

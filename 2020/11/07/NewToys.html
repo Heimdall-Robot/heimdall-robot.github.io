@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="/assets/css/style.css?v=db7e0c2d4a1123a8e3cee41198736144f92c5b15">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
+    <script src="/assets/js/navbar.js">
+    </script>
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>New Toys! | Heimdallr</title>
+<meta name="generator" content="Jekyll v3.9.1" />
+<meta property="og:title" content="New Toys!" />
+<meta name="author" content="roper" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Apologies for posting this update a day late, our team was pretty excited with some developments and forgot to update yesterday." />
+<meta property="og:description" content="Apologies for posting this update a day late, our team was pretty excited with some developments and forgot to update yesterday." />
+<link rel="canonical" href="https://heimdallr-robot.github.io/2020/11/07/NewToys.html" />
+<meta property="og:url" content="https://heimdallr-robot.github.io/2020/11/07/NewToys.html" />
+<meta property="og:site_name" content="Heimdallr" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="New Toys!" />
+<script type="application/ld+json">
+{"description":"Apologies for posting this update a day late, our team was pretty excited with some developments and forgot to update yesterday.","url":"https://heimdallr-robot.github.io/2020/11/07/NewToys.html","@type":"BlogPosting","headline":"New Toys!","dateModified":"2020-11-07T00:00:00+00:00","datePublished":"2020-11-07T00:00:00+00:00","author":{"@type":"Person","name":"roper"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://heimdallr-robot.github.io/2020/11/07/NewToys.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+
+            <a href="/index.html">
+                <h1 id="project_title">Heimdallr</h1>
+                <h2 id="project_tagline">Multi-Terrain Patrol, Security, and Surveillance Robot</h2>
+            </a>
+
+            <div class="navbar" id="myTopnav">
+    <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a><a href="/">Home</a><a href="/members.html">Team Members</a><a href="/posts.html">Project Updates</a><a href="/therobot.html">The Robot</a><div class="dropdown">
+        <button class="dropbtn"> Documents
+            <i class="fa fa-caret-down"></i>
+
+        </button>
+        <div class="dropdown-content"><a href="/documents/Requirements.html">Project Requirements</a><a href="/documents/Literary-Search.html">Literary Research</a><a href="/documents/style-guide.html">Style Guide</a></div>
+    </div><a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
+</div>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+        <section id="main_content" class="inner">
+            <h1>New Toys!</h1>
+
+<p>
+    07 Nov 2020- <a href="/members/roper.html">Gabriel Roper</a></p>
+
+<p>Apologies for posting this update a day late, our team was pretty excited with some developments and forgot to update
+yesterday.</p>
+
+<p>On Thursday (or keeping with our team name, Thor’s Day), some parts that we ordered came in. We now have our Jetson
+Nano, which will act as the primary processor for the robot. This specific computer was chosen as it packs more
+processing power than other single board computers on the market, and at $50 for 2GB of RAM, it is also one of the less
+single board computers on the market. Additionally, we received a servo motor, so that we can test it to confirm that
+it will work for our application. Finally, we received an Intel Realsense D415.</p>
+
+<p>The <a href="https://www.intelrealsense.com/depth-camera-d415/">Realsense D415</a> is a three camera system that is capable of not
+full color images, but 3D depth data as well. It does this by using one camera for full color,
+and two other cameras for depth perception this dual camera setup is the same way that humans are able to see depth,
+with our eyes acting as cameras). This camera will act as the primary navigation sensor on our robot,
+allowing it to automatically build a map of its surroundings.</p>
+
+<p class="center-image-caption">To test out this sensor, I took it for a walk around the STEM building on campus, and used a program called
+<a href="http://introlab.github.io/rtabmap/">RTABMap</a> to see how well it could keep track of its position. The answer turned out
+to be that it did a phenomenal job at tracking full 6DOF position (X,Y,Z, Yaw, Pitch, Roll), without anything else but
+the camera.
+<img src="downTheHall.jpg" alt="Scanning The Hall" class="center-image" />
+Starting the walk down the hall of the STEM Building.</p>
+
+<p>As the image above shows, the walk down shows the camera doing a great good job. On the left of the display are three
+different image windows. The top image is the current view from the camera. All of the small colored dots on the image
+are “features” that the software detected in the image, and will use to track the camera’s current position.
+Below that is a display that is currently black. If the software thinks that it recognizes an image as matching a place
+it has seen before, it will display the image it is comparing to there. At the very bottom is the depth image, showing
+how far away each part of the image is from the camera. The black areas in the image are regions that it cannot
+calculate the depth of.</p>
+
+<p>On the right, we have a display of the current timing and configuration data, which is only visible as I was checking
+it at the time of the screenshot being taken. Also, there is the 3D display, which shows all of the images that the
+camera has taken, but projected into 3D using the depth sensor.</p>
+
+<p>RTABMap uses a mapping technique called Loop Closure Detection. It builds up the map as data is collected, by mapping
+the changes from the previous image to the current image, but at the same time, it scans the previous images to look for
+any images that are the same, indicating that it has been to the same location before. If it finds a match, it is able
+to draw a loop from the previous time it is been at that location, as shown below.</p>
+
+<div class="mermaid center-image-caption">
+graph LR;
+        1--&gt;2--&gt;3--&gt;4--&gt;5-.Loop Closure.-&gt;1;
+</div>
+<script async="" src="https://unpkg.com/mermaid@8.8.3/dist/mermaid.min.js"></script>
+
+<p class="center-image-caption">A series of five images, with the fifth image showing a return to the same location as the first.</p>
+
+<p>Once a loop closure is found, it can be used to fix any errors that have built up the map. An example is shown below.</p>
+
+<p class="center-image-caption"><img src="beforeClose.jpg" alt="Before Loop Closure" class="center-image" />
+Before Loop Closure</p>
+
+<p class="center-image-caption"><img src="afterClose.jpg" alt="After Loop Closure" class="center-image" />
+After Loop Closure</p>
+
+<p>The first image shows before I had finished walking all the way around the upstairs and downstairs on the STEM building
+on campus, with the hallways highlighted on the map. RTABMap seems to think the the upper and lower hallways are
+at a sharp angle to each other, incorrect, the are actually parallel to each other, and stacked on top of each other.
+However, because it lacks any information to tell itself this, it does not realize that it is incorrect.</p>
+
+<p>In the second image, I have finished walking all the way around the two halls. As RTABMap recognized the lower hall as
+being a location it has visited before, and realizes that it miscalculated the position of the entire upper hallway. 
+It was then able to use this information to adjust the entire map to properly fit the real world.</p>
+
+<p>One other thing to note from the data is the very large amount of data spraying out from the map. These are the times 
+that the camera was able to see out a window, and it attempted to use that data to build the map further out. 
+However, with the camera being farther away, and through glass that can distort the image, the quality is not very high. 
+This is not too much of a problem, as if the robot does then move outside, it will update the map with new data that
+is much higher quality.</p>
+
+        </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <footer>
+        <div id="footer_wrap" class="outer">
+    </footer>
+    </div>
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-176925840-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+</body>
+
+</html>

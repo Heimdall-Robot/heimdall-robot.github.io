@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="https://heimdallr-robot.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://heimdallr-robot.github.io/" rel="alternate" type="text/html" /><updated>2021-04-17T22:42:11+00:00</updated><id>https://heimdallr-robot.github.io/feed.xml</id><title type="html">Heimdallr</title><subtitle>Multi-Terrain Patrol, Security, and Surveillance Robot</subtitle><entry><title type="html">I Hope This is Not How it is Done in the Industry</title><link href="https://heimdallr-robot.github.io/2021/04/17/Update.html" rel="alternate" type="text/html" title="I Hope This is Not How it is Done in the Industry" /><published>2021-04-17T00:00:00+00:00</published><updated>2021-04-17T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/04/17/Update</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/04/17/Update.html">&lt;p&gt;The title of this week’s update is a quote from Trevor. The cause of the quote is because with one week left before
+the test document is due, we have disassembled a decent portion of the robot. This was necessary as the robot was too
+heavy for the servos to handle. As a result, we are replaceing the rest of the metal joints of the robot with
+carbon-fiber infused 3D prints. This decreases the weight of the robot significantly, and should allow the robot to
+walk.&lt;/p&gt;
+
+&lt;p&gt;Why the motors are being overstressed is unclear, as the robot’s mass matched our calculations. We are not currently
+looking too far into this, as finishing the robot is our main goal.&lt;/p&gt;
+
+&lt;p&gt;In other news, the university PCB mill is broken, so we had to jerry-rig our existing PCB to support the new regulator.
+Surprisingly, this worked.&lt;/p&gt;
+
+&lt;p&gt;While these are unfortunate setbacks, the testing we have performed so far suggests that our robot is actually working,
+it was just too heavy. Because of this, we are still confident that we can get the robot walking by the end of next
+week.&lt;/p&gt;</content><author><name>roper</name></author><summary type="html">The title of this week’s update is a quote from Trevor. The cause of the quote is because with one week left before the test document is due, we have disassembled a decent portion of the robot. This was necessary as the robot was too heavy for the servos to handle. As a result, we are replaceing the rest of the metal joints of the robot with carbon-fiber infused 3D prints. This decreases the weight of the robot significantly, and should allow the robot to walk.</summary></entry><entry><title type="html">Test document</title><link href="https://heimdallr-robot.github.io/2021/04/10/Update.html" rel="alternate" type="text/html" title="Test document" /><published>2021-04-10T00:00:00+00:00</published><updated>2021-04-10T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/04/10/Update</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/04/10/Update.html">&lt;p&gt;This week was heavily focused on writing the test document that was due at 2:00 pm on Friday. Sadly, the robot was not 
+walking by this tme, so a significant number  of the tests were automatic failures. The test document will be added
+to the website once it as been reviewed by Dr. Isenberg.&lt;/p&gt;</content><author><name>roper</name></author><summary type="html">This week was heavily focused on writing the test document that was due at 2:00 pm on Friday. Sadly, the robot was not walking by this tme, so a significant number of the tests were automatic failures. The test document will be added to the website once it as been reviewed by Dr. Isenberg.</summary></entry><entry><title type="html">Dejavu, or the tale of the PCB</title><link href="https://heimdallr-robot.github.io/2021/04/02/Dejavu.html" rel="alternate" type="text/html" title="Dejavu, or the tale of the PCB" /><published>2021-04-02T00:00:00+00:00</published><updated>2021-04-02T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/04/02/Dejavu</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/04/02/Dejavu.html">&lt;p&gt;This past week the PCB went through another redesign. It turned out tha the power regulator IC that the team had
+selected had a very odd limitation: It required an I2C command to begin supplying power. Unfortunately, the device that
+would supply the I2C command requires power from the regulator to be able to send it, creating a catch-22. Due to this,
+a new regulator was source from Pololu on Amazon. This arrived this friday, and has been confirmed to work.&lt;/p&gt;
+
+&lt;p&gt;Other news: Gabe is working on code to read the servo positions with the ADC. Trevor is integrating the IMU into
+RTABMap, Nick is continuing on working on the test document, and Alex is building the robot (The legs have been
+assembled and feet have been printed. We are nearing final assembly!)&lt;/p&gt;</content><author><name>roper</name></author><summary type="html">This past week the PCB went through another redesign. It turned out tha the power regulator IC that the team had selected had a very odd limitation: It required an I2C command to begin supplying power. Unfortunately, the device that would supply the I2C command requires power from the regulator to be able to send it, creating a catch-22. Due to this, a new regulator was source from Pololu on Amazon. This arrived this friday, and has been confirmed to work.</summary></entry><entry><title type="html">Building, Fixing, and Rebuilding</title><link href="https://heimdallr-robot.github.io/2021/03/26/Update.html" rel="alternate" type="text/html" title="Building, Fixing, and Rebuilding" /><published>2021-03-26T00:00:00+00:00</published><updated>2021-03-26T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/03/26/Update</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/03/26/Update.html">&lt;p&gt;This past week has been full of work. The physical construction of the robot is moving already at a brisk pace.
+Virtually all of the structure has been fabricated, the body has been assembled, with Alex working on building the legs.&lt;/p&gt;
+
+&lt;p&gt;Things have not been running as well on the electronics side. A PCB design was milled and the power regulation circuitry
+was soldered to it. However, the regulator did not appear to be working. After testing, it was determined that the
+voltage input was not routed correctly. Some SMD rework was performed to patch the design. After this fix, the regulator
+was able to output a 3.2V signal. However, the I2C Communication with the regulator could not be obtained. Because of
+this, an additional review of the PCB will be performed to verify all of components are wired up correctly.&lt;/p&gt;
+
+&lt;p&gt;Due to this, software development has been on hold this past week as the PCB assembly and testing has taken up most of
+the time. However, Trevor plans to get back to work on the software starting on Monday.&lt;/p&gt;
+
+&lt;p&gt;Finally, Nick has begun work on the test document, which will detail all of the test and development processes that the
+team has followed.&lt;/p&gt;</content><author><name>roper</name></author><summary type="html">This past week has been full of work. The physical construction of the robot is moving already at a brisk pace. Virtually all of the structure has been fabricated, the body has been assembled, with Alex working on building the legs.</summary></entry><entry><title type="html">ROS, Building, Code Generation.</title><link href="https://heimdallr-robot.github.io/2021/03/13/Update.html" rel="alternate" type="text/html" title="ROS, Building, Code Generation." /><published>2021-03-13T00:00:00+00:00</published><updated>2021-03-13T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/03/13/Update</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/03/13/Update.html">&lt;p&gt;Many big things have happened this past week. Continued issues with RTABMap led to the team deciding to downgrade to
+using ROS1 instead of ROS2, allowing for us to use pre-built binaries.&lt;/p&gt;
+
+&lt;p&gt;At the same time, Alex has begun building the robot, as he has finished the 3D printing of all of the parts.&lt;/p&gt;
+
+&lt;p&gt;The last big news is that the first pass on coverting MATLAB Code to C++ has been completed, allowing trevor to begin 
+work on integrating the kinematics code into the main ROS program.&lt;/p&gt;</content><author><name>roper</name></author><summary type="html">Many big things have happened this past week. Continued issues with RTABMap led to the team deciding to downgrade to using ROS1 instead of ROS2, allowing for us to use pre-built binaries.</summary></entry><entry><title type="html">Turning, Converting to C, and Building</title><link href="https://heimdallr-robot.github.io/2021/03/05/Update.html" rel="alternate" type="text/html" title="Turning, Converting to C, and Building" /><published>2021-03-05T00:00:00+00:00</published><updated>2021-03-05T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/03/05/Update</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/03/05/Update.html">&lt;p&gt;A turning algorithm has successfully been developed, allowing the robot to
+face any direction. Now the focus of software development has been placed on
+converting these algorithms to C. For ease of use, the entire walking/turning
+algorithm has been placed into one function.&lt;/p&gt;
+
+&lt;p&gt;Now that all of our parts have arrived, the parts of the robot are starting to
+machined. Both the software and hardware sides of this project are coming closer
+to being able to be used for a physical robot.&lt;/p&gt;</content><author><name>rossi</name></author><summary type="html">A turning algorithm has successfully been developed, allowing the robot to face any direction. Now the focus of software development has been placed on converting these algorithms to C. For ease of use, the entire walking/turning algorithm has been placed into one function. Now that all of our parts have arrived, the parts of the robot are starting to machined. Both the software and hardware sides of this project are coming closer to being able to be used for a physical robot.</summary></entry><entry><title type="html">Dynamical Confirmation of Walking Algorithm</title><link href="https://heimdallr-robot.github.io/2021/02/26/Update.html" rel="alternate" type="text/html" title="Dynamical Confirmation of Walking Algorithm" /><published>2021-02-26T00:00:00+00:00</published><updated>2021-02-26T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/02/26/Update</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/02/26/Update.html">&lt;p&gt;The robot now can walk in any direction!&lt;/p&gt;
+
+&lt;p&gt;https://youtu.be/wnPDytatBA4&lt;/p&gt;
+
+&lt;p&gt;Now the an algorithm for turning is in development. Currently the circuit boards
+are being routed. RTAB has also been successfully integrated into ROS. The robot’s
+printed body parts are now printed and we are waiting on materials to start
+making the metal parts.&lt;/p&gt;</content><author><name>rossi</name></author><summary type="html">The robot now can walk in any direction! https://youtu.be/wnPDytatBA4 Now the an algorithm for turning is in development. Currently the circuit boards are being routed. RTAB has also been successfully integrated into ROS. The robot’s printed body parts are now printed and we are waiting on materials to start making the metal parts.</summary></entry><entry><title type="html">Confirming Walking Algorithm through Kinematic Simulation</title><link href="https://heimdallr-robot.github.io/2021/02/19/Update.html" rel="alternate" type="text/html" title="Confirming Walking Algorithm through Kinematic Simulation" /><published>2021-02-19T00:00:00+00:00</published><updated>2021-02-19T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/02/19/Update</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/02/19/Update.html">&lt;p&gt;After observing multiple flaws related to stability with the previous walking
+algorithm, we decided to completely remake it. Instead of moving the body
+and then deciding when and how to step, the robot now instead always steps
+if the desired body goal is outside of a certain boundary. The body pose controller
+is used to maintain stability or reach goals that are close to the robot.&lt;/p&gt;
+
+&lt;p&gt;Here is a video that shows proof of concept.
+https://youtu.be/F_IfZyil0oY&lt;/p&gt;
+
+&lt;p&gt;Now some slight issues with this algorithm will be ironed out. Next, an algorithm
+for stepping to turn will be designed.&lt;/p&gt;</content><author><name>rossi</name></author><summary type="html">After observing multiple flaws related to stability with the previous walking algorithm, we decided to completely remake it. Instead of moving the body and then deciding when and how to step, the robot now instead always steps if the desired body goal is outside of a certain boundary. The body pose controller is used to maintain stability or reach goals that are close to the robot. Here is a video that shows proof of concept. https://youtu.be/F_IfZyil0oY Now some slight issues with this algorithm will be ironed out. Next, an algorithm for stepping to turn will be designed.</summary></entry><entry><title type="html">Revenge of the TLAs: USB, PCB, ROS</title><link href="https://heimdallr-robot.github.io/2021/02/12/Update.html" rel="alternate" type="text/html" title="Revenge of the TLAs: USB, PCB, ROS" /><published>2021-02-12T00:00:00+00:00</published><updated>2021-02-12T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/02/12/Update</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/02/12/Update.html">&lt;p&gt;This week a few different things happened. Nick continues the implementation of the walking algorithm, Alex has
+received the 3D printed servo mounts that will be used on the robot, and he continues refining the structural design
+for the robot. Trevor has taken over working on ROS and the Jetson Nano to free myself up to work on re-designing the
+custom PCB that we will use. In the past week, the PCB has undergone two revisions to improve its capabilities, which
+means that a total of three revisions of the PCB have been designed so far.&lt;/p&gt;
+
+&lt;h2 id=&quot;revision-1&quot;&gt;Revision 1&lt;/h2&gt;
+
+&lt;p&gt;The first revision was a quick design last semester with the goal of demonstrating all of the main capabilities of the
+board. This design was noticeable for the heavy use of through hole components to simplify soldering.&lt;/p&gt;
+
+&lt;p class=&quot;center-image-caption&quot;&gt;&lt;img src=&quot;PCB_REV_1.png&quot; alt=&quot;First Revision of the PCB&quot; class=&quot;center-image&quot; /&gt;
+First Revision of the PCB&lt;/p&gt;
+
+&lt;h2 id=&quot;revision-2&quot;&gt;Revision 2&lt;/h2&gt;
+
+&lt;p&gt;When the team begain placing orders this semester, it was discovered that the power converter IC that the team intended
+to use was out of stock at all major distributer until December, so a new power IC had to be selected. Using the
+&lt;a href=&quot;https://www.ti.com/design-resources/design-tools-simulation/webench-power-designer.html&quot;&gt;WEBENCH Power Designer&lt;/a&gt;
+(&lt;em&gt;This should not be considered an endorsement of TI products by our team&lt;/em&gt;) from
+Texas Instruments, 4 possible new designs were found, and one based on the
+&lt;a href=&quot;https://www.ti.com/product/TPS55288&quot;&gt;TPS55288&lt;/a&gt; was selected, as all four designs had the same unit cost, but the
+TPS55288 based design offered the most capabilities.
+As this IC is designed for USB Power Delivery, the output current limit and voltage can be controlled over I2C.
+This I2C bus also allows for the IC to report some error states, it can be used for on-board debugging of the design
+as well. Additionally, the IC has the ability to output a voltage proportional to the current draw of the load. While
+this feature was designed to allow voltage compensation for loss in long wires, it can be also used as a general purpose
+current sensor, which will greatly improve the battery calculations on the robot.&lt;/p&gt;
+
+&lt;p&gt;Another issue discovered was the orientation of the header on the PCB that would be connected to the Jetson Nano had the
+pins mapped improperly, due to the fact that the KiCAD footprints for a pin header (a male connector), and a pin socket
+(a female connector), were not the same.&lt;/p&gt;
+
+&lt;p&gt;These two issue required significant redesign of the PCB, leading to the second revision. During this process, it was
+also decided that surface mount soldering was possible, and most componets were switched to it to save space.&lt;/p&gt;
+
+&lt;p&gt;Additionally, as the battery connector is polarized, and components that are exposed directly to the board have
+reverse voltage protection, the additional reverse protection circuitry was removed.&lt;/p&gt;
+
+&lt;p class=&quot;center-image-caption&quot;&gt;&lt;img src=&quot;PCB_REV_2.png&quot; alt=&quot;PCB Revision 2&quot; class=&quot;center-image&quot; /&gt;
+PCB Revision 2&lt;/p&gt;
+
+&lt;h2 id=&quot;revision-3&quot;&gt;Revision 3&lt;/h2&gt;
+
+&lt;p&gt;The second revision was considered feature complete, but it was decided that it fell short in expandability.
+As designed, not all pins on the Jetson Nano were being utilized in the design. However, as a ribbon cable will be used
+to link the Jetson Nano to the PCB, these pins will be inaccessible. If additional electronics are added to the design
+an new PCB would have had to be designed.&lt;/p&gt;
+
+&lt;p&gt;PCB Revision 3 is still being finalized, but when complete, it will solve this problem by adding additional pin headers
+to the board that allow for quick access to the additional pins. The small size of board meant that this requires
+re-arranging most of the existing pin headers, making this revision more complex that expected.&lt;/p&gt;
+
+&lt;p class=&quot;center-image-caption&quot;&gt;&lt;img src=&quot;PCB_REV_3.png&quot; alt=&quot;PCB Revision 3 (in progress)&quot; class=&quot;center-image&quot; /&gt;
+PCB Revision 3 (in progress)&lt;/p&gt;
+
+&lt;h2 id=&quot;revision-4&quot;&gt;Revision 4?&lt;/h2&gt;
+
+&lt;p&gt;A fourth revision of the PCB might be made. This would be a fairly minor version, adding test pads to the design.
+Should we opt to have our PCB manufactured by a third part that adds a Solder Mask, test points will greatly simplify
+any diagnostics that may be necessary.&lt;/p&gt;</content><author><name>roper</name></author><summary type="html">This week a few different things happened. Nick continues the implementation of the walking algorithm, Alex has received the 3D printed servo mounts that will be used on the robot, and he continues refining the structural design for the robot. Trevor has taken over working on ROS and the Jetson Nano to free myself up to work on re-designing the custom PCB that we will use. In the past week, the PCB has undergone two revisions to improve its capabilities, which means that a total of three revisions of the PCB have been designed so far.</summary></entry><entry><title type="html">Controlling, Redesigning, and Testing Legs</title><link href="https://heimdallr-robot.github.io/2021/02/04/Update.html" rel="alternate" type="text/html" title="Controlling, Redesigning, and Testing Legs" /><published>2021-02-04T00:00:00+00:00</published><updated>2021-02-04T00:00:00+00:00</updated><id>https://heimdallr-robot.github.io/2021/02/04/Update</id><content type="html" xml:base="https://heimdallr-robot.github.io/2021/02/04/Update.html">&lt;p&gt;This week, a method for individually controlling legs independent of the main
+body controller has been created. The robot is now able to lift one leg in order
+to step while using the other three legs to move and tilt its body as desired.
+A logical controller for determining when and how to step has already been made.
+Now the logical controller and the singular leg controller will be combined
+to allow for full walking functionality.&lt;/p&gt;
+
+&lt;p&gt;Aside from the controls, the robots proportions including body size and leg
+length are being redesign in order to allow for balance to be maintained easier.&lt;/p&gt;</content><author><name>rossi</name></author><summary type="html">This week, a method for individually controlling legs independent of the main body controller has been created. The robot is now able to lift one leg in order to step while using the other three legs to move and tilt its body as desired. A logical controller for determining when and how to step has already been made. Now the logical controller and the singular leg controller will be combined to allow for full walking functionality. Aside from the controls, the robots proportions including body size and leg length are being redesign in order to allow for balance to be maintained easier.</summary></entry></feed>
